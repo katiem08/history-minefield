@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Minefield</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero" aria-labelledby="game-title">
+        <p class="eyebrow">Historical figures minefield</p>
+        <h1 id="game-title">Youngest to Oldest</h1>
+        <p class="instructions">
+          Click the figures in order from the most recent birthdate to the oldest.
+          Correct picks turn green. One wrong pick ends the game and reveals your score.
+        </p>
+      </section>
+
+      <section class="panel score-panel" aria-live="polite">
+        <div>
+          <span class="label">Correct</span>
+          <strong id="correct-count">0</strong><span>/20</span>
+        </div>
+        <div>
+          <span class="label">Next target</span>
+          <strong id="next-target">Most recent birthdate</strong>
+        </div>
+        <button id="restart-button" type="button">Restart</button>
+      </section>
+
+      <section id="message" class="message" aria-live="assertive">
+        Start with the person born most recently.
+      </section>
+
+      <section class="grid" id="figure-grid" aria-label="Historical figure choices"></section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
